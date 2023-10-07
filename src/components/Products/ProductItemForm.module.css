@@ -1,0 +1,34 @@
+.form {
+  text-align: right;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+}
+
+.form button {
+  font: inherit;
+  cursor: pointer;
+  border: 1px solid #2f6c68;
+  background-color: #2f6c68;
+  color: #fff;
+  padding: 0.5rem 2.5rem;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.form button:hover,
+.form button:active {
+  background-color: #aed8cc;
+  border-color: #2f6c68;
+  color: #3c4547;
+}
+
+.cart-icon {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+}

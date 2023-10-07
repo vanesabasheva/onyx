@@ -1,0 +1,42 @@
+.categories {
+  list-style: none;
+  padding: 0;
+  animation: products-appear 1s ease-out forwards;
+  font-size: 20px;
+  font-family: "Playfair Display", sans-serif;
+}
+
+.categories ul {
+  border-radius: 12px;
+  border: 1px solid rgba(102, 102, 102, 0.25);
+  padding: 1rem;
+  font-family: "Inter", sans-serif;
+}
+
+.categories a {
+  font-size: 18px;
+  padding: 1rem;
+  color: #666;
+}
+
+.categories a:hover,
+.categories a:active {
+  color: #495456;
+  text-decoration: underline solid rgba(102, 102, 102, 0.25);
+}
+
+.categories li {
+  margin-bottom: 1rem;
+}
+
+@keyframes products-appear {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

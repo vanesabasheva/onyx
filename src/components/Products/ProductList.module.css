@@ -1,0 +1,46 @@
+.products {
+  max-width: 60rem;
+  width: 90%;
+  animation: products-appear 1s ease-out forwards;
+  display: grid;
+  font-family: "Playfair Display", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.products ul {
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  gap: 12px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.products li:hover {
+  border: 1px solid #9a999932;
+  box-shadow: 1px 0px 4px 3px rgba(0, 0, 0, 0.089);
+  border-radius: 12px;
+}
+
+.irrelevant-info {
+  font-family: "Inter", sans-serif;
+  color: #adb5bd;
+  margin-left: 0.5rem;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+@keyframes products-appear {
+  from {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
