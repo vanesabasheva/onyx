@@ -1,10 +1,12 @@
+import { NavLink } from "react-router-dom";
 import classes from "./Header.module.css";
 
 function Header() {
   return (
     <>
       <header className={classes.header}>
-        <h1>ONYX</h1>
+        <NavLink to="/">ONYX</NavLink>
+        <p>pharmacy</p>
       </header>
     </>
   );
