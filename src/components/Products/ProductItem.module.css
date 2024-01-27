@@ -1,23 +1,17 @@
 .product {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  margin: 1rem;
-  padding-bottom: 1rem;
+  margin: 0 auto;
+  padding-bottom: 1.8rem;
   flex-direction: column;
+  text-align: center;
+  display: flex;
   align-items: center;
+  gap: 1.6rem;
 }
 
 .product img {
-  width: 12rem;
-  height: auto;
-}
-
-.product h1 {
-  margin-bottom: 0.5rem;
+  width: 100%;
 }
 
 .product h4 {
-  margin-top: 0;
   font-weight: 500;
 }

@@ -1,17 +1,27 @@
 import classes from "./Carousel.module.css";
-import { ReactComponent as ArrowLeft } from "../../assets/icons/ArrowLeft.svg";
-import { ReactComponent as ArrowRight } from "../../assets/icons/ArrowRight.svg";
 
 function Carousel(props) {
+  // const productList = products.map((product) => (
+  //   <li>
+  //     <ProductItem key={product.id} product={product}></ProductItem>
+  //   </li>
+  // ));
+
   return (
     <div className={classes.carousel}>
-      <button className={classes.btn}>
-        <ArrowLeft />
+      <button className={`${classes[`btn--left`]} ${classes.btn}`}>
+        <ion-icon name="chevron-back-outline"></ion-icon>
+      </button>
+      <button className={`${classes[`btn--right`]} ${classes.btn}`}>
+        <ion-icon name="chevron-forward-outline"></ion-icon>
       </button>
       <img src={props.image} alt="current_sale_image" />
-      <button className={classes.btn}>
-        <ArrowRight />
-      </button>
+      <div className={classes.dots}>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+      </div>
     </div>
   );
 }

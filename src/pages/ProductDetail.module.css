@@ -1,0 +1,141 @@
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 9.6rem 3.6rem;
+  gap: 4.8rem;
+  animation: products-appear 500ms ease-out forwards;
+}
+
+.product-container img {
+  width: 50%;
+  justify-self: center;
+}
+
+@keyframes products-appear {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.add-to-cart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  gap: 1.2rem;
+}
+
+.product-brand-name {
+  font-weight: 500;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  border-bottom: 2px solid #fff;
+}
+
+.product-brand-name:link,
+.product-brand-name:visited {
+  color: #0e5e6f;
+  transition: all 300ms;
+}
+
+.product-brand-name:hover,
+.product-brand-name:active {
+  color: #cd5c08;
+  border-bottom: 2px solid #cd5c08;
+}
+
+.add-to-cart-container h2 {
+  font-weight: 600;
+  font-size: 3.2rem;
+}
+
+.extra-info {
+  color: #999;
+  font-size: 1.2rem;
+
+  display: flex;
+  gap: 2.4rem;
+  margin-bottom: 3.2rem;
+}
+
+.product-price {
+  font-weight: 600;
+  font-size: 2.8rem;
+  color: #1d5752;
+}
+
+/**********************/
+/** Additional Info **/
+/********************/
+
+.additional-info {
+  overflow: hidden;
+  margin: 10.8rem;
+}
+
+.button-container {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  justify-content: flex-start;
+  /* gap: 3.2rem; */
+  margin: 1.2rem 1.8rem;
+  border-bottom: 2px solid #1d57529b;
+}
+
+.button-container li {
+  text-align: center;
+}
+
+.button-container button {
+  display: inline-block;
+  font-size: 1.6rem;
+  width: fit-content;
+  height: auto;
+  font-weight: 600;
+  padding: 1rem;
+  text-align: start;
+  line-height: 1.8;
+  transition: all 300ms;
+
+  border-top-right-radius: 9px;
+  border-top-left-radius: 9px;
+}
+
+.button-container button:hover {
+  color: #333;
+}
+
+.btn {
+  color: #2a433d;
+}
+
+.button-container .btn.btn-active {
+  background-color: #2a433d;
+  color: #fff;
+}
+
+.description {
+  margin: 1.2rem 1.8rem;
+  padding: 1rem;
+  width: 75%;
+  line-height: 1.5;
+  color: #495456;
+  font-size: 1.8rem;
+}
+
+.description p {
+  margin-bottom: 2rem;
+}
+
+.description p:last-child {
+  font-size: 1rem;
+  color: #999;
+  margin-bottom: 0;
+}

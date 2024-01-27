@@ -1,37 +1,52 @@
 .search {
-  /* display: flex;
+  display: flex;
   align-items: center;
-  border-radius: 20px;
-  align-items: flex-start;
-  position: relative; */
+  border: 1px solid rgba(221, 221, 221, 0.6);
+
+  background-color: #fff;
+  border-radius: 60px;
+  padding: 0.4rem;
+  box-shadow: 0rem 0.4rem 0.6rem rgba(0, 0, 0, 0.03);
+  transition: all 0.5s;
 }
 
-/* .search input {
-  padding: 0.5rem;
-  margin-right: 0rem;
-  border: 1px solid #6a9c89;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-  background-color: transparent;
+.search:hover,
+.search:focus-within {
+  box-shadow: 0rem 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
 }
 
-.search input:focus {
-  outline-color: #166762;
-} */
+.search:focus-within {
+  box-shadow: 0rem 0.4rem 0.8rem rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(153, 153, 153, 0.6);
+}
 
-.search button {
-  background-color: transparent;
-  color: #0e5e6f;
+.search-input {
   border: none;
-  cursor: pointer;
-  padding: 8px 10px;
+  outline: none;
+  flex-grow: 1;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: transparent;
 }
 
-.search button:hover {
+.search-button {
+  border: none;
+  outline: none;
+  background-color: #fff;
+  border-radius: 20px; /* Rounded corners */
+  padding: 0.8rem;
+  cursor: pointer; /* Changes the cursor to indicate it's clickable */
+  margin-left: -2rem; /* Overlap button over input to make it seamless */
+}
+
+.search-button ion-icon:hover {
   color: #cd5c08;
 }
 
-.search-icon {
-  width: 24px;
-  height: 24px;
+.search-button ion-icon {
+  color: #4e6082;
+  width: 2.4rem;
+  height: 2.4rem;
+  transition: all 0.5s;
 }

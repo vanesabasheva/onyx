@@ -1,0 +1,39 @@
+.products-page-layout {
+  display: grid;
+  grid-template-columns: 0.25fr 1fr;
+  gap: 6.4rem;
+  margin: 3.2rem 3.2rem;
+}
+
+.carousel-products-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 6.4rem;
+}
+
+.category-heading {
+  font-size: 1.8rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  margin-left: 3.2rem;
+  margin-top: 6.4rem;
+  gap: 1.2rem;
+  animation: products-appear 1s ease-out forwards;
+}
+
+.paging {
+  grid-column: 1/-1;
+}
+
+@keyframes products-appear {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

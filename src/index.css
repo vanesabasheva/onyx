@@ -3,25 +3,55 @@ SPACING SYSTEM (px)
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 
 FONT SIZE SYSTEM (px)
-10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 /
+ 44 / 52 / 62 / 74 / 86 / 98
 */
 
-/* 
-MAIN COLOR: #2f6c68; #0e5e6f; #1d5752; #aed8cc
-GRAY COLOR: #495456, #adb5bd; #666; 
-ACCENT COLOR: #cd5c08; #ffefd6
+/***************************************/
+/* COLORS */
+/****************************************
+
+MAIN COLOR: 
+#2f6c68
+#0e5e6f
+#1d5752 
+#aed8cc
+
+GRAY COLOR: 
+#495456,
+#adb5bd; 
+#ddd
+#999
+#666; 
+#444  
+#333
+ACCENT COLOR: 
+#cd5c08;
+#ffefd6;
+#fcd6a9
+#fdf2e9
+#fffaf4
 */
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;700;900&family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,800;0,900;1,600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
   font-family: "Inter", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #495456;
-  /* background-color: #ffefd6; */
-  background-color: #f6fae7;
-  background-color: #fffaf4;
+  color: #555;
+  background-color: #fff;
 }
 
 code {
@@ -30,33 +60,61 @@ code {
 }
 
 main {
-  margin: 2rem auto;
+  margin: 0 auto;
+  padding: 6.4rem;
   text-align: center;
-}
-
-.products-page-layout {
-  display: grid;
-  grid-template-columns: 1fr 4fr;
-  gap: 50px;
-  margin-left: 2rem;
-}
-
-.products-position {
-  grid-column: 2/3;
-}
-
-.category-heading {
   display: flex;
-  align-items: center;
-  margin-left: 2rem;
-  margin-top: 2rem;
-  gap: 1rem;
-  color: #495456;
-  animation: products-appear 1s ease-out forwards;
+  justify-content: center;
 }
 
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+.heading-secondary {
+  font-family: "Playfair Display", sans-serif;
+  font-size: 3.6rem;
+  line-height: 1.2;
+}
+
+.grid--3-cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+}
+
+.grid--gap-md {
+  gap: 4.8rem;
+}
+
+.grid--gap-lg {
+  gap: 6.4rem;
+}
 ul {
   list-style: none;
+}
+
+a,
+a:visited {
+  color: #555;
+  text-decoration: none;
+}
+
+a,
+a:hover {
+  color: #333;
+}
+
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
 }
 
 @keyframes products-appear {

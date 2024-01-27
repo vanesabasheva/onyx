@@ -14,7 +14,7 @@ function CartButton(props) {
   //  return curNumber + item.amount;
   // }, 0);
 
-  // const numberOfCartItems = 3;
+  const numberOfCartItems = 3;
   const btnClasses = `${classes.button} ${
     btnIsHighlighted ? classes.bump : ""
   }`;
@@ -24,7 +24,7 @@ function CartButton(props) {
       <span className={classes.icon}>
         <CartIcon />
       </span>
-      {/* <span className={classes.badge}>{numberOfCartItems}</span> */}
+      <span className={classes.badge}>{numberOfCartItems}</span>
     </button>
   );
 }
