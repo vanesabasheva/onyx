@@ -15,7 +15,9 @@ export function MainNavigation() {
   const modal = useRef();
   const { items } = useContext(CartContext);
 
-  const cartQuantity = items.length;
+  const cartQuantity = items.reduce((total, currentItem) => {
+    return total + currentItem.quantity;
+  }, 0);
 
   function handleOpenCartClick() {
     modal.current.open();
