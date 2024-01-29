@@ -1,21 +1,31 @@
-import ProductItemForm from "./ProductItemForm";
 import Card from "../UI/Card";
 import classes from "./ProductItem.module.css";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { CartContext } from "../../store/shopping-cart-context";
+import CartIcon from "../Cart/CartIcon";
 
 function ProductItem({ product }) {
-  const addToCartHandler = (amount) => {};
+  const { addItemToCart } = useContext(CartContext);
 
   return (
     <Card>
       <article className={classes.product}>
         <Link to={`/product/${product.id}`}>
           <img src={product.image} alt={product.title} />
-          <h1>{product.title}</h1>
+          <h1 className={classes.title}>{product.title}</h1>
         </Link>
-        <p>{product.price}</p>
+        <p className={classes.description}>{product.description}</p>
+        <p className={classes.price}>{product.price} лв.</p>
         <div>
-          <ProductItemForm id={product.id} onAddToCart={addToCartHandler} />
+          <button
+            className={classes[`button-container`]}
+            onClick={() => addItemToCart(product.id)}>
+            <span>Добави</span>
+            <span>
+              <CartIcon className={classes.icon} />
+            </span>
+          </button>
         </div>
       </article>
     </Card>

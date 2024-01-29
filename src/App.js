@@ -15,8 +15,11 @@ import { ReactComponent as WaterIcon } from "./assets/icons/WaterIcon.svg";
 import { DUMMY_PRODUCTS } from "./assets/mocks/DummyData";
 import { DUMMY_PRODUCT } from "./assets/mocks/DummyData";
 import { SALE_IMAGES } from "./assets/mocks/DummyData";
-import { categories } from "./assets/mocks/DummyData";
+import { categories1 } from "./assets/mocks/DummyData";
 import ProductDetailPage from "./pages/ProductDetail";
+import CartContextProvider from "./store/shopping-cart-context";
+import { CartContext } from "./store/shopping-cart-context";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -33,7 +36,7 @@ const router = createBrowserRouter([
             loader: () => {
               return {
                 products: DUMMY_PRODUCTS,
-                categories: categories,
+                categories: categories1,
                 heading: "Лекарства без лекарско предписание",
                 carousel_image: carousel_image,
               };
@@ -45,7 +48,7 @@ const router = createBrowserRouter([
             loader: () => {
               return {
                 products: DUMMY_PRODUCTS,
-                categories: categories,
+                categories: categories1,
                 heading: "Козметика",
                 carousel_image: carousel_image,
               };
@@ -57,7 +60,7 @@ const router = createBrowserRouter([
             loader: () => {
               return {
                 products: DUMMY_PRODUCTS,
-                categories: categories,
+                categories: categories1,
                 heading: "Хранителни добавки",
                 carousel_image: carousel_image,
               };
@@ -69,7 +72,7 @@ const router = createBrowserRouter([
             loader: () => {
               return {
                 products: DUMMY_PRODUCTS,
-                categories: categories,
+                categories: categories1,
                 heading: "Мама и бебе",
                 carousel_image: carousel_image,
               };
@@ -81,7 +84,7 @@ const router = createBrowserRouter([
             loader: () => {
               return {
                 products: DUMMY_PRODUCTS,
-                categories: categories,
+                categories: categories1,
                 heading: "Лична хигиена",
                 carousel_image: carousel_image,
               };
@@ -93,7 +96,7 @@ const router = createBrowserRouter([
             loader: () => {
               return {
                 products: DUMMY_PRODUCTS,
-                categories: categories,
+                categories: categories1,
                 heading: "Промоции",
                 carousel_image: carousel_image,
               };
@@ -105,7 +108,7 @@ const router = createBrowserRouter([
             loader: () => {
               return {
                 products: DUMMY_PRODUCTS,
-                categories: categories,
+                categories: categories1,
                 heading: "ДИНАМИЧНА КАТЕГОРИЯ",
                 carousel_image: carousel_image,
               };
@@ -130,7 +133,9 @@ const router = createBrowserRouter([
 function App() {
   return (
     <>
-      <RouterProvider router={router}></RouterProvider>
+      <CartContextProvider>
+        <RouterProvider router={router}></RouterProvider>
+      </CartContextProvider>
     </>
   );
 }

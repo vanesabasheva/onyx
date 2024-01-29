@@ -15,3 +15,39 @@
 .product h4 {
   font-weight: 500;
 }
+
+.title {
+  color: #444;
+}
+
+.description {
+  font-weight: 300;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+
+  font-size: 1.4rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: 2px solid #2f6c6860;
+  background-color: #2f6c68;
+  color: #fff;
+  padding: 1rem 3.2rem;
+  border-radius: 30px;
+  transition: all 500ms;
+}
+
+.product button:hover,
+.product button:active {
+  background-color: #aed8cc;
+  color: #444;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}

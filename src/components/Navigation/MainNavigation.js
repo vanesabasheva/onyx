@@ -1,16 +1,39 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
-import ReactDOM from "react-dom";
+import { useRef, useContext } from "react";
+
+import CartModal from "../Cart/CartModal";
+import { CartContext } from "../../store/shopping-cart-context";
 import classes from "./MainNavigation.module.css";
 import CartButton from "../Cart/CartButton";
 import SearchBar from "../Layout/SearchBar";
 import Header from "../Layout/Header";
-import Backdrop from "../UI/Backdrop";
-import Overlay from "../UI/Overlay";
 import { categories } from "../../assets/mocks/DummyData";
 import DropdownNavigation from "./DropdownNavigation";
 
 export function MainNavigation() {
+  const modal = useRef();
+  const { items } = useContext(CartContext);
+
+  const cartQuantity = items.length;
+
+  function handleOpenCartClick() {
+    modal.current.open();
+  }
+
+  let modalActions = (
+    <button onClick={() => modal.current.close()}>Затвори</button>
+  );
+
+  if (cartQuantity > 0) {
+    modalActions = (
+      <>
+        <button onClick={() => modal.current.close()}>Затвори</button>
+        <button>Завърши поръчката</button>
+      </>
+    );
+  }
+
   const [searchValue, setSearchValue] = useState("");
   const searchHandler = () => {};
 
@@ -20,62 +43,6 @@ export function MainNavigation() {
   };
 
   const [activeNav, setActiveNav] = useState(null);
-
-  const categories = {
-    Лекарства: [
-      "Болки",
-      "Грип и настинка",
-      "Болно гърло",
-      "Кашлица",
-      "Хрема",
-      "Алергия",
-      "Храносмилателна система",
-      "Сърдечно-съдова система",
-      "Очи и уши",
-      "Хомеопатия",
-      "Кожни болести",
-      "Женско здраве",
-      "Мъжко здраве",
-    ],
-    "Хранителни Добавки": [
-      "Билкови продукти",
-      "Витамини",
-      "Минерали",
-      "Храносмилане",
-      "Памет и оросяване",
-      "Сърце",
-      "Кости, стави, мускули",
-      "Коса, кожа, нокти",
-      "Имунитет",
-      "Сън и спокойствие",
-      "Спортни добавки",
-    ],
-    Козметика: [
-      "Грижа за коса",
-      "Грижа за кожа",
-      "Грижа за лице",
-      "Ръце",
-      "Тяло",
-      "Мъже",
-    ],
-    "Мама и бебе": [
-      "Козметика за бебета и деца",
-      "Бебешки храни",
-      "Бебешки аксесоари",
-      "Орална хигиена",
-      "Храни и напитки",
-    ],
-    "Лична Хигиена": [
-      "Oрална хигиена",
-      "Тяло",
-      "Интимна хигиена",
-      "Дезодоранти",
-      "Консумативи",
-      "Бръснене и депилация",
-      "Още?",
-    ],
-    Промоции: [],
-  };
 
   const handleMouseEnter = (category) => {
     setActiveNav(category);
@@ -89,15 +56,7 @@ export function MainNavigation() {
 
   return (
     <>
-      {ReactDOM.createPortal(
-        <Backdrop></Backdrop>,
-        document.getElementById("backdrop-root")
-      )}
-
-      {ReactDOM.createPortal(
-        <Overlay categories={categories} />,
-        document.getElementById("overlay-root")
-      )}
+      <CartModal ref={modal} title="Koшница" actions={modalActions} />
       <div className={classes["info-bar"]}>
         <span className={classes.info}>
           <ion-icon name="call-outline"></ion-icon>
@@ -105,7 +64,6 @@ export function MainNavigation() {
         </span>
         <span className={classes.info}>
           <ion-icon name="location-outline"></ion-icon>
-          Посетете ни:{" "}
           <a
             target="_blank"
             rel="noreferrer"
@@ -126,7 +84,10 @@ export function MainNavigation() {
               />
             </li>
             <li>
-              <CartButton />
+              <CartButton
+                onClick={handleOpenCartClick}
+                cartQuantity={cartQuantity}
+              />
             </li>
           </ul>
         </header>

@@ -24,7 +24,7 @@ function CartButton(props) {
       <span className={classes.icon}>
         <CartIcon />
       </span>
-      <span className={classes.badge}>{numberOfCartItems}</span>
+      <span className={classes.badge}>{props.cartQuantity}</span>
     </button>
   );
 }

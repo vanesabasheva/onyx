@@ -1,7 +1,6 @@
 import { useRef, useState } from "react";
 
 import Input from "../UI/Input";
-import classes from "./ProductItemForm.module.css";
 import CartIcon from "../Cart/CartIcon";
 
 const ProductItemForm = (props) => {
@@ -27,7 +26,7 @@ const ProductItemForm = (props) => {
   };
 
   return (
-    <form className={classes.form} onSubmit={submitHandler}>
+    <form onSubmit={submitHandler}>
       <Input
         ref={amountInputRef}
         label="Брой"
@@ -40,10 +39,10 @@ const ProductItemForm = (props) => {
           defaultValue: "1",
         }}
       />
-      <button className={classes[`button-container`]}>
+      <button>
         <span>Добави</span>
         <span>
-          <CartIcon className={classes.icon} />
+          <CartIcon />
         </span>
       </button>
 
