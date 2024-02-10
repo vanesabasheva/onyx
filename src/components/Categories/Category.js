@@ -11,9 +11,13 @@ function Category(props) {
 
   return (
     <div className={classes.categories}>
-      <h2>Категории</h2>
       <div>
-        <ul>{productCategories}</ul>
+        <ul>
+          <li>
+            <h4>Категории</h4>
+          </li>
+            {productCategories}
+        </ul>
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 .footer {
   width: 100%;
   height: auto;
-  background-color: #ddf5ef;
+  background-color: #dc8d52;
   padding: 3.6rem 10.8rem 6.4rem 10.8rem;
   margin-top: 4.8rem;
   /* border-top: 2px solid #2f6c6871; */
@@ -11,6 +11,7 @@
   display: flex;
   flex-direction: column;
   padding: 0 3.6rem;
+  color: #522503;
 }
 
 .footer h2 {
@@ -22,7 +23,7 @@
 
 .footer span {
   font-size: 1.2rem;
-  color: #666666a2;
+  color: #ebbe9c;
   margin-right: auto;
 }
 
@@ -30,7 +31,7 @@
   font-family: "Inter", sans-serif;
   font-size: 1.4rem;
   font-weight: 400;
-  color: #779c93;
+  color: #ebbe9c;
   margin-top: auto;
 }
 
@@ -41,6 +42,7 @@
 
 .social-links ion-icon {
   width: 2.4rem;
+  color: #522503;
   height: 2.4rem;
 }
 
@@ -48,6 +50,7 @@
   font-size: 2rem;
   font-weight: 600;
   margin-bottom: 3.2rem;
+  color: #522503;
 }
 
 .contacts {
@@ -66,16 +69,16 @@
 .links a:visited,
 .contacts a,
 .contacts a:visited {
-  color: #666;
+  color: #f0ceb5;
   font-size: 1.6rem;
   transition: all 300ms;
-  border-bottom: 2px solid #ddf5ef;
+  border-bottom: 1px solid #dc8d52;
 }
 
 .links a:hover,
 .links a:active,
 .contacts a:hover,
 .contacts a:active {
-  color: #333;
-  border-bottom: 2px solid #999;
+  color: rgba(250, 239, 230, 0.9);
+  border-bottom: 1px solid #dc8d52;
 }

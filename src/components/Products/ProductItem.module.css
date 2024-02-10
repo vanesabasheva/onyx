@@ -33,18 +33,19 @@
   font-size: 1.4rem;
   font-weight: 600;
   cursor: pointer;
-  border: 2px solid #2f6c6860;
-  background-color: #2f6c68;
+  border: 2px solid #cd5c08;
+  background-color: #cd5c08;
   color: #fff;
-  padding: 1rem 3.2rem;
-  border-radius: 30px;
+  padding: 1rem 3.6rem;
+  border-radius: 15px;
   transition: all 500ms;
 }
 
 .product button:hover,
 .product button:active {
-  background-color: #aed8cc;
-  color: #444;
+  background-color: #ffa94d;
+  border: 2px solid #ffa94d;
+  color: #fff;
 }
 
 .icon {

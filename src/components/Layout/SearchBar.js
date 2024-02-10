@@ -1,5 +1,4 @@
 import classes from "./SearchBar.module.css";
-import { useState } from "react";
 
 function SearchBar(props) {
   return (

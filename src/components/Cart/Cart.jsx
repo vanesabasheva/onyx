@@ -6,7 +6,7 @@ export default function Cart() {
     const { items, updateItemQuantity } = useContext(CartContext);
 
     const totalPrice = items.reduce(
-        (acc, item) => acc + item.price * item.quantity, 
+        (acc, item) => acc + item.price * item.quantity,
         0
     );
     const formattedTotalPrice = `${totalPrice.toFixed(2)} лв.`;
@@ -24,7 +24,7 @@ export default function Cart() {
                                 <img src={item.image} alt={item.title} />
                                 <span>{item.title}</span>
                                 <span>{formattedPrice}</span>
-                            
+
                                 <div className={classes[`cart-item-actions`]}>
                                     <button onClick={() => updateItemQuantity(item.id, -1)}> - </button>
                                     <span>{item.quantity}</span>
@@ -36,8 +36,8 @@ export default function Cart() {
                 </ul>
             )}
             <p className={classes[`cart-total-price`]}>
-               <span>Крайна сума</span>  
-               <span><strong>{formattedTotalPrice}</strong></span>
+                <span>Крайна сума</span>
+                <span><strong>{formattedTotalPrice}</strong></span>
             </p>
 
         </div>
