@@ -1,0 +1,141 @@
+.layout {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  text-align: center;
+  flex-direction: column;
+  margin-top: 4.8rem;
+  gap: 3.6rem;
+  max-width: 90%;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  max-width: 55rem;
+  border: 1px solid #ddd;
+  margin: 0.6rem auto;
+  padding: 2.4rem 3.6rem;
+  border-radius: 25px;
+  color: #505050;
+  font-weight: 600;
+}
+
+.form p {
+  font-size: 1.4rem;
+}
+.control {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.control input {
+    display: block;
+    width: 100%;
+    padding: 1.2rem;
+    font-size: 1.4rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    
+    color: #303030;
+  }
+  
+  .control select {
+    display: block;
+    width: 100%;
+    max-width: 15rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 1px solid #758a8a;
+    color: #505050;
+  }
+
+  .control:has(input[type='checkbox']) label {
+    margin: 0rem;
+  }
+  
+  .control input[type='checkbox'] {
+    display: inline-block;
+    width: auto;
+    max-width: none;
+    margin-right: 0rem;
+    border-radius: 0;
+    border: none;
+    background-color: transparent;
+    color: #d9e2f1;
+  }
+
+  .control label {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 0.4rem;
+    color: #9bafaf;
+    text-transform: uppercase;
+    
+  }
+
+  .control-error {
+    color: #ff9029;
+    height: 2rem;
+    padding: 0.5rem 0;
+  }
+  
+  .control-error p {
+    font-size: 1.2rem;
+  }
+
+  .control-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  :global(.react-phone-number-input__flag) {
+    width: 25px; /* Set the width to your preference */
+    height: auto; /* This will keep the aspect ratio intact */
+  }
+  
+  .form hr {
+    border: 1px solid #ddd;
+  }
+  .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2.4rem;
+  }
+  
+  .button {
+    padding: 1.2rem 1.6rem;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    border: none;
+    background-color: #cd5c08;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.5s;
+  }
+  
+  .button:hover,
+  .button:focus {
+    background-color: #fcd6a9;
+  }
+  
+  .button-flat {
+    background-color: transparent;
+    color: #ca9555;
+  }
+  
+  .button-flat:hover,
+  .button-flat:focus {
+    background-color: transparent;
+    color: #7a6142;
+  }
+
+  .total-price {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 400;
+  }

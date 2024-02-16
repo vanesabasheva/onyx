@@ -18,7 +18,7 @@ import { SALE_IMAGES } from "./assets/mocks/DummyData";
 import { categories1 } from "./assets/mocks/DummyData";
 import ProductDetailPage from "./pages/ProductDetail";
 import CartContextProvider from "./store/shopping-cart-context";
-import { CartContext } from "./store/shopping-cart-context";
+import FormSubmission from "./components/FormSubmission/FormSubmission";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +27,10 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       { index: true, element: <HomePage images={SALE_IMAGES} /> },
+      {
+        path:"checkout",
+        element: <FormSubmission />
+      },
       {
         path: "category",
         children: [

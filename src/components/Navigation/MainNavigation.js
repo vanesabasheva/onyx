@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useRef, useContext } from "react";
 
@@ -12,12 +12,17 @@ import { categories } from "../../assets/mocks/DummyData";
 import DropdownNavigation from "./DropdownNavigation";
 
 export function MainNavigation() {
+  const navigate = useNavigate();
   const modal = useRef();
   const { items } = useContext(CartContext);
 
   const cartQuantity = items.reduce((total, currentItem) => {
     return total + currentItem.quantity;
   }, 0);
+
+  function handleCheckout() {
+    navigate("/checkout");
+  }
 
   function handleOpenCartClick() {
     modal.current.open();
@@ -31,7 +36,7 @@ export function MainNavigation() {
     modalActions = (
       <>
         <button onClick={() => modal.current.close()}>Затвори</button>
-        <button>Завърши поръчката</button>
+        <button onClick={handleCheckout}>Завърши поръчката</button>
       </>
     );
   }
