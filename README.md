@@ -1,3 +1,17 @@
+Concept and Implementation of a Web Application for the Online Shop of a Pharmacy "Onyx"
+ - Sale of over-the-counter medications, dietary supplements, etc.
+
+Home Page
+![image](https://github.com/user-attachments/assets/2c0898cb-8e3b-40e7-83cf-22bdf455afde)
+Products List:
+![image](https://github.com/user-attachments/assets/45bc4613-1a7a-4305-a176-5c1f8a62fa81)
+Cart:
+![image](https://github.com/user-attachments/assets/8521ccea-e45e-4e06-814a-a23c910da1f2)
+Order Form:
+![image](https://github.com/user-attachments/assets/9de342c9-05a4-4aec-a2ce-adf30384ed09)
+![image](https://github.com/user-attachments/assets/32d2181a-f121-42f4-b44c-515cf4ffb8e8)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
